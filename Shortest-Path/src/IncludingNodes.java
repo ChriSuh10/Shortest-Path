@@ -26,7 +26,8 @@ public class IncludingNodes {
 				Vertex t1 = targets.get(i);
 				Vertex t2 = targets.get(j);
 				
-				Dijkstra d = new Dijkstra(new Graph(all, edges));
+				Graph g = new Graph(all, edges);
+				Dijkstra d = new Dijkstra(g);
 				d.Shortest(t1, t2);
 				paths.add(d.shortestPath(t2));
 			}
